@@ -18,6 +18,10 @@ class Country extends Model
 
     public function states()
     {
+        //caso a chave estrangeira não siga o padrao nome da tabela + id
+        //return $this->hasMany(State::class,'nomeDaColunaEstrangeiraDeCountry');
+        //e caso a chave estrangeira não seja referencia para o id do outra tabela
+        //return $this->hasMany(State::class,'nomeDaColunaEstrangeiraDeCountry','nomeDaColunaRepresentada');
         return $this->hasMany(State::class);
     }
 }
