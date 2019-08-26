@@ -113,5 +113,21 @@ class OneToManyController extends Controller
 
     }
 
+    public function oneToManyThrough()
+    {
+        $country = Country::find(1);
+        echo "País: {$country->name}";
+
+        $cities = $country->cities;
+
+        foreach($cities as $city)
+        {
+            echo " {$city->name}, ";
+        }
+
+        echo "<br>Total de cidades: {$cities->count()}";
+
+    }
+
 }
 
