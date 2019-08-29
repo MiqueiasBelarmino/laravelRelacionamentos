@@ -12,4 +12,10 @@ class City extends Model
         //o correto deveria ser city_company, pois ci vem antes de co
         return $this->belongsToMany(Company::class, 'company_city');
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class,'commentable');
+    }
+
 }

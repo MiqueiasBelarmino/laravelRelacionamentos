@@ -26,11 +26,16 @@ $this->get('one-to-many-insert-two','OneToManyController@oneToManyInsertTwo');
 
 
 $this->get('one-to-many-through','OneToManyController@oneToManyThrough');
+
+//Many To Many
 $this->get('many-to-many','ManyToManyController@manyToMany');
 $this->get('many-to-many-inverse','ManyToManyController@manyToManyInverse');
 
 $this->get('many-to-many-insert','ManyToManyController@manyToManyInsert');
 
+//Polymorphic
+$this->get('polymorphic','PolymorphicController@polymorphic');
+$this->get('polymorphic-insert','PolymorphicController@polymorphicInsert');
 Route::get('/', function () {
     return view('welcome');
 });
